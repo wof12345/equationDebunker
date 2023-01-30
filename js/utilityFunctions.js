@@ -47,7 +47,7 @@ function findMaxExponentFromString() {
     else {
       if (isVariable(key)) {
         exponentObj.push([1, key, coefficientObj[key]], 1);
-      } else exponentObj.push(coefficientObj[key], -new Date().getTime());
+      } else exponentObj.push(+coefficientObj[key], -new Date().getTime());
     }
   }
 }
@@ -65,7 +65,7 @@ function translateObjStringToInteger(givenValue = 1) {
     } else {
       total += +coefficientObj[key];
     }
-    console.log("bis", total, +coefficientObj[key]);
+    // console.log("bis", total, +coefficientObj[key]);
   }
 
   return total;
